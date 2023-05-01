@@ -4,11 +4,13 @@ import Accordion from 'react-bootstrap/Accordion';
 import Button from 'react-bootstrap/Button';
 
 const CheckOut = () => {
-    const outlines= useLoaderData();
-    console.log(outlines);
+    const course= useLoaderData();
+    const outlines = course.outlines;
+    // console.log(outlines);
     return (
         <div className='container'>
-            <h4 className='text-primary text-center mt-5 mb-3'>Course Outlines</h4>
+            <h4 className='text-primary  mt-5 mb-3'>{course.title}</h4>
+            <h5 className='text-center mt-5 mb-3'>Course Outlines</h5>
             <Accordion defaultActiveKey="0">
             {
                 outlines.map((outline,indx) => 
