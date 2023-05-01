@@ -1,0 +1,7 @@
+.nav-design{
+    text-decoration: none;
+}
+
+.nav-design:hover{
+    color: orange;
+}

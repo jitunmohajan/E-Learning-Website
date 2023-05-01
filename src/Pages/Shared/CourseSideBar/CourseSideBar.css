@@ -1,0 +1,11 @@
+.text-bold{
+    font-weight: 600;
+}
+.course-side-nav{
+    text-decoration: none;
+    color: orange;
+    background-color: orange;
+}
+/* .course-side-nav:hover{
+    color: orange;
+} */
