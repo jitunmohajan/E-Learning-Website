@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Accordion from 'react-bootstrap/Accordion';
+import Button from 'react-bootstrap/Button';
 
 const CheckOut = () => {
     const outlines= useLoaderData();
@@ -22,6 +23,10 @@ const CheckOut = () => {
             }
            
             </Accordion>
+
+            <div className='mx-auto'>
+                <Button className='mt-5' variant="primary">Check out</Button>
+            </div>
         </div>
     );
 };

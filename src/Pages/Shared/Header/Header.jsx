@@ -21,7 +21,7 @@ const Header = () => {
     }
     return (
         
-        <Navbar className='' bg="light" expand="lg">
+        <Navbar className='header pt-3 pb-3' bg="" expand="lg">
             <Container>
               <Container>
                 <Navbar.Brand href="#home">
@@ -32,7 +32,8 @@ const Header = () => {
                     height="30"
                     className="d-inline-block align-top"
                   />{' '}
-                  E Learning
+                  {/* <NavLink className='text-white ' to='/'>E Learning</NavLink> */}
+                  <Navbar.Brand className='text-white ' href="#home">E-Learning</Navbar.Brand>
                 </Navbar.Brand>
               </Container>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />

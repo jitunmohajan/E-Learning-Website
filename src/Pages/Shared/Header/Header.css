@@ -1,5 +1,16 @@
+.header{
+    background-color: #101e47;
+}
+.text-blue{
+    color: #101e47;
+}
+.orange-color{
+    color: orange;
+}
+
 .nav-design{
     text-decoration: none;
+    color: white;
 }
 
 .nav-design:hover{
@@ -13,7 +24,11 @@
 
 .logOut-btn{
     text-decoration: none;
-    color: blue;
+    color: white;
     border: none;
-    background-color: white;
+    background-color: #101e47;
+}
+
+.logOut-btn:hover{
+    color: orange;
 }

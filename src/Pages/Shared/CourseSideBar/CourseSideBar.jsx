@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const CourseSideBar = ({courses}) => {
     return (
-        <Card className='mt-5' style={{ width: '18rem' }}>
+        <Card className='mt-3 ms-3' style={{ width: '18rem' }}>
             <Card.Title className='mx-auto text-primary text-bold pt-3 pb-3'>Courses</Card.Title>
             <ListGroup className='pt-4' variant="flush">
                 {

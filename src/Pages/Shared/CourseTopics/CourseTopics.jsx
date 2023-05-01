@@ -6,7 +6,7 @@ const CourseTopics = ({courses}) => {
         <div>
 
             <div className='container'>
-                <h2 className='mt-5 mx-auto'><span className='orange'>Programming</span> <span className='text-primary'>Topics</span></h2>
+                <h2 className='mt-5 text-center'><span className='orange'>Our</span> <span className='text-primary'>Courses</span></h2>
                 <Row xs={1} md={2} lg={3} className="mt-5 justify-content-center">
                     
                         {
