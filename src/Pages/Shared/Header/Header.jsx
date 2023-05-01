@@ -19,6 +19,7 @@ const Header = () => {
           console.error(error);
         });
     }
+    console.log(user);
     return (
         
         <Navbar className='header pt-3 pb-3' bg="" expand="lg">
@@ -46,7 +47,7 @@ const Header = () => {
                   {/* <NavLink className="me-2 nav-design" to='*'>{user?.displayName}</NavLink> */}
 
                   {
-                    user?.email? 
+                    user?.displayName? 
                     <>
                       <img className='img-icon' src={user?.photoURL} alt="" />
                       <button className="logOut-btn" onClick={handleLogOut}>LogOut</button>

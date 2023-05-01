@@ -35,7 +35,7 @@ const Login = () => {
     const handleGithubLogin =()=>{
         signInWithGithub()
         .then((result) => {
-            // setUser(result.user);
+            console.log(result.user);
             setError('');
             navigate(from, { replace: true });
         }).catch((error) => {

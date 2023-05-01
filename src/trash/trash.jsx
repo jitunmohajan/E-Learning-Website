@@ -2,7 +2,7 @@ import './App.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import logo from '../public/E learning.png';
+import logo from './E learning.png';
 
 
 import Carousel from 'react-bootstrap/Carousel';

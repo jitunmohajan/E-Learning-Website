@@ -18,18 +18,18 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: ()=> fetch('http://localhost:5000/courses')
+                loader: ()=> fetch('https://assignment-10-server-dun.vercel.app/courses')
             },
             {
                 path: '/courses',
                 element: <Courses></Courses>,
-                loader: ()=> fetch('http://localhost:5000/courses')
+                loader: ()=> fetch('https://assignment-10-server-dun.vercel.app/courses')
             },
             {
                 path: '/courses/:id',
                 element: <CourseDetails></CourseDetails>,
                 loader: ({params})=> {
-                    return fetch(`http://localhost:5000/courses/${params.id}`)
+                    return fetch(`https://assignment-10-server-dun.vercel.app/courses/${params.id}`)
                 }
             },
             {
@@ -40,7 +40,7 @@ export const router = createBrowserRouter([
                 path: '/checkout/:id',
                 element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute> ,
                 loader: ({params})=>{
-                    return fetch(`http://localhost:5000/courses/${params.id}`)
+                    return fetch(`https://assignment-10-server-dun.vercel.app/courses/${params.id}`)
                 }
             },
             {
