@@ -18,10 +18,14 @@ const CourseDetails = () => {
                     { course.description }
                     </Card.Text>
                     <p><small>Instuctor: {course.instructor}</small></p>
+
+                    <p>What You will learn:</p>
+                    
                     {
-                        
+                        course.outlines.map(outline=> <li>{outline.title}</li> )
                     }
-                        <Link to={`/checkout/${course._id}`}><Button variant="primary">Get premium access</Button></Link>
+                    <p className='mt-5'></p>
+                    <Link to={`/checkout/${course._id}`}><Button variant="primary">Get premium access</Button></Link>
                     </Card.Body>
                 </Card>
             </div>

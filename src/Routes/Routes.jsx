@@ -6,6 +6,7 @@ import CourseDetails from "../Pages/CourseDetails/CourseDetails";
 import Login from "../Pages/Login/Login";
 import CheckOut from "../Pages/CheckOut/CheckOut";
 import PrivateRoute from './PrivateRoute/PrivateRoute'
+import Blogs from "../Pages/Blogs/Blogs";
 
 export const router = createBrowserRouter([
 
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
                 loader: ({params})=>{
                     return fetch(`http://localhost:5000/checkout/${params.id}`)
                 }
+            },
+            {
+                path: '/blogs',
+                element: <Blogs></Blogs>
             }
         ]
     }
