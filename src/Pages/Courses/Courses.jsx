@@ -10,7 +10,7 @@ const Courses = () => {
     return (
         <div>
             {/* <CourseSideBar></CourseSideBar> */}
-            <Container>
+            {/* <Container> */}
                 <Row>
                     <Col lg={3}>
                         <CourseSideBar courses={courses}></CourseSideBar>
@@ -19,7 +19,7 @@ const Courses = () => {
                         <CourseTopics courses={courses}> </CourseTopics>
                     </Col>
                 </Row>
-            </Container>
+            {/* </Container> */}
             
         </div>
     );

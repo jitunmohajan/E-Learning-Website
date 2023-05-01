@@ -31,6 +31,7 @@ const Home = () => {
             </div> */}
 
             <CourseTopics courses={courses}></CourseTopics>
+            
 
         </div>
     );

@@ -5,10 +5,19 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { AuthContext } from '../../Context/AuthProvider';
-// import { FaGoogle, FaGithub } from "react-icons/fa";
+import { FaGoogle, FaGithub } from "react-icons/fa";
+
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
+
+    const navigate = useNavigate(); 
+
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+
     const [key, setKey] = useState('login');
+    const [error, setError] =useState('');
 
     const  {signInWithGoogle, signInWithGithub, createUser, signIn, updateUserProfile} = useContext(AuthContext);
 
@@ -16,9 +25,10 @@ const Login = () => {
         signInWithGoogle()
         .then((result) => {
             // setUser(result.user);
-            console.log(user);
+            setError('');
+            navigate(from, { replace: true });
         }).catch((error) => {
-            console.error(error);
+            setError(error);
         });
     }
 
@@ -26,9 +36,10 @@ const Login = () => {
         signInWithGithub()
         .then((result) => {
             // setUser(result.user);
-            
+            setError('');
+            navigate(from, { replace: true });
         }).catch((error) => {
-            console.log(error)
+            setError(error)
         });
     }
 
@@ -39,12 +50,12 @@ const Login = () => {
         const password = form.password.value;
         signIn(email, password)
         .then((result) => {
-            console.log(result.user.displayName);
-            // setUser(result.user.displayName);
+            setError('');
+            navigate(from, { replace: true });
             form.reset();
         })
         .catch((error) => {
-           console.log(error);
+            setError(error);
         });
 
         
@@ -67,7 +78,7 @@ const Login = () => {
            handleUpdateUser(name,photoURL);
         })
         .catch((error) => {
-            console.log(error);
+            setError(error);
         });
         
     }
@@ -81,7 +92,7 @@ const Login = () => {
         .then(() => {
             
         }).catch((error) => {
-            console.error(error)
+            setError(error)
         });
     }
     return (
@@ -109,6 +120,9 @@ const Login = () => {
                                 <Button className='w-100' variant="primary" type="submit">
                                     Login
                                 </Button>
+                                <Form.Text className="text-danger">
+                                    {error}
+                                </Form.Text>
                             </Form>
                         </Tab>
                         
@@ -147,10 +161,9 @@ const Login = () => {
 
 
                     <ButtonGroup vertical className='w-100 mt-3'>
-                        <Button  onClick={handleGoogleSignIn} variant="outline-primary">  Log in with Google</Button>
-                        <Button onClick={handleGithubLogin} className='mt-3' variant="outline-secondary"> Log In with Github</Button>
+                        <Button  onClick={handleGoogleSignIn} variant="outline-primary"> <FaGoogle></FaGoogle> Log in with Google</Button>
+                        <Button onClick={handleGithubLogin} className='mt-3' variant="outline-secondary"> <FaGithub></FaGithub> Log In with Github</Button>
                     </ButtonGroup>
-                        {/* <FaGoogle></FaGoogle>   <FaGithub></FaGithub>  */}
                        
                     </div>
                 </div>

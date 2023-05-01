@@ -39,16 +39,19 @@ const Header = () => {
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto">
                   <NavLink  className="me-2 nav-design" to='/'>Home</NavLink>
-                  <NavLink  className="me-2 nav-design" to='/'>Home</NavLink>
-                  <NavLink  className="me-2 nav-design" to='/'>Home</NavLink>
                   <NavLink className="me-2 nav-design" to='/courses'>Courses</NavLink>
-                  <NavLink className="me-2 nav-design" to='*'>{user?.displayName}</NavLink>
+                  <NavLink  className="me-2 nav-design" to='/'>FAQ</NavLink>
+                  <NavLink  className="me-2 nav-design" to='/'>Blogs</NavLink>
+                  {/* <NavLink className="me-2 nav-design" to='*'>{user?.displayName}</NavLink> */}
 
                   {
                     user?.email? 
-                    <button onClick={handleLogOut}>LogOut</button>
+                    <>
+                      <img className='img-icon' src={user?.photoURL} alt="" />
+                      <button className="logOut-btn" onClick={handleLogOut}>LogOut</button>
+                    </>
                     :
-                    <NavLink className="me-2 nav-design" to='/login'>LogIn</NavLink>
+                    <NavLink className="nav-design"  to='/login'>LogIn</NavLink>
                   }
                   
                   

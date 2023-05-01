@@ -5,3 +5,15 @@
 .nav-design:hover{
     color: orange;
 }
+
+.img-icon{
+    width: 30px;
+    border-radius: 15px;
+}
+
+.logOut-btn{
+    text-decoration: none;
+    color: blue;
+    border: none;
+    background-color: white;
+}
