@@ -1,14 +1,13 @@
 ## E-Learning Website
 
-    * [Live website]()
+* [Live website](https://assignment-10-a637b.web.app/)
 
 Features and Functionality :
 
-* Programming learing website
-* Get Basic Knowledge in some Topic
-* single page application
-* Firebase authentication using user login, github and google
+* Google signin using firebase
+* Github Signin using firebase
 * Private Route and Middleware
+* Context APi
 
 
 Technologies:
